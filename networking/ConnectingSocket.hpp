@@ -1,9 +1,9 @@
 
-// This class implements a call to the bind()function of
+// This class implements a call to the connect()function of
 // sockets as a definition of the connect_to_network virtual function from WbbSocket
 
-#ifndef BindingSocket_hpp
-#define BindingSocket_hpp
+#ifndef ConnectingSocket_hpp
+#define ConnectingSocket_hpp
 
 #include <stdio.h>
 
@@ -11,11 +11,11 @@
 
 namespace WEBSERVER
 {
-class BindingSocket: public WebSocket
+class ConnectingSocket: public WebSocket
 {
 public:
     // Constructor
-    BindingSocket(int domain, int service, int protocol, int port, u_long interface);
+    ConnectingSocket(int domain, int service, int protocol, int port, u_long interface);
          
     // Virtual function from parent
     int connect_to_network(int sock, struct sockaddr_in address);

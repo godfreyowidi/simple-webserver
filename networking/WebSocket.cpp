@@ -10,9 +10,6 @@ WEBSERVER::WebSocket::WebSocket(int domain, int service, int protocol, int port,
     // Establish socket
     sock = socket(domain, service, protocol);
     test_connection(sock);
-    // Establish newtwork connection
-    connection = connect_to_network(sock, address);
-    test_connection(connection);
 }
 
 // Test connection virtual function
@@ -42,4 +39,11 @@ int WEBSERVER::WebSocket::get_sock()
 int WEBSERVER::WebSocket::get_connection()
 {
     return connection;
+}
+
+// Setter function
+
+void WEBSERVER::WebSocket::set_connection(int con)
+{
+    connection = con;
 }
