@@ -1,6 +1,6 @@
 #include "WebSocket.hpp"
 
-// Default constructor
+/* CONSTRUCTOR */
 WEBSERVER::WebSocket::WebSocket(int domain, int service, int protocol, int port, u_long interface)
 {
     // Define address structure
